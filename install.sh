@@ -4,6 +4,9 @@ cd ~
 git clone https://github.com/johnpupu/myEnv.git
 mv .vimrc .vimrc.yours
 mv .vim .vim.yours
+mv .tmux.conf .tmux.conf.yours
+mv .tmuxr .tmuxr.yours
+mv .cshrc .cshrc.yours
 ln -s myEnv/.vimrc
 ln -s myEnv/.vim
 ln -s myEnv/.tmux.conf
