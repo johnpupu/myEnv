@@ -43,3 +43,27 @@ setenv LC_CTYPE en_US.ISO8859-1
 #setenv LANG en_US.UTF-8
 setenv LC_ALL zh_TW.UTF-8
 setenv LANG zh_TW.UTF-8
+
+set prompt = '[%B%n%{^[[1;32m%}@%M%b] %B%~%b%# '
+
+# if user is root, make the username bold and red
+if (`whoami` == "root") then
+  set prompt = '[%B%{^[[1;31m%}%n%{^[[1;32m%}@%M%b] %B%~%b%# '
+endif
+
+# color
+setenv LSCOLORS ExGxFxdxCxegedabagExEx
+setenv CLICOLOR yes
+# autolist
+set autolist
+set autoexpand
+set autocorrect
+set recexact
+
+# bind keypad keys for console, vt100, vt102, xterm
+bindkey "\e[1~" beginning-of-line  # Home
+bindkey "\e[2~" overwrite-mode     # Ins
+bindkey "\e[3~" delete-char        # Delete
+bindkey "\e[4~" end-of-line        # End
+bindkey "^P" history-search-backward # CTRL + p = history-search-backward
+bindkey "^N" history-search-forward  # CTRL + n = history-search-forward
