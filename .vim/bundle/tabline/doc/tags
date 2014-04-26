@@ -1,0 +1,14 @@
+tabline#tabs()	tabline.txt	/*tabline#tabs()*
+tabline-TabLineMore	tabline.txt	/*tabline-TabLineMore*
+tabline-TabLineNr	tabline.txt	/*tabline-TabLineNr*
+tabline-TabLineNrSel	tabline.txt	/*tabline-TabLineNrSel*
+tabline-TabLineSplitNr	tabline.txt	/*tabline-TabLineSplitNr*
+tabline-TabLineSplitNrSel	tabline.txt	/*tabline-TabLineSplitNrSel*
+tabline-configuration	tabline.txt	/*tabline-configuration*
+tabline-contents	tabline.txt	/*tabline-contents*
+tabline-functions	tabline.txt	/*tabline-functions*
+tabline-highlight-groups	tabline.txt	/*tabline-highlight-groups*
+tabline-introduction	tabline.txt	/*tabline-introduction*
+tabline-options	tabline.txt	/*tabline-options*
+tabline-usage	tabline.txt	/*tabline-usage*
+tabline.txt	tabline.txt	/*tabline.txt*

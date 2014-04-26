@@ -1,0 +1,13 @@
+<?php
+
+class ${1:model}Controller extends Ichi_BackendController
+{
+		public function init()
+		{
+				$this->_model_name = '$1';
+				$this->_identity = "${2:my_identity}";
+				${3}
+
+				parent::init();
+		}
+}

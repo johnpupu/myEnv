@@ -1,0 +1,125 @@
+*tabline.txt*                                Tabline configuration
+
+Version:    0.0.1
+Author:     bootleq <bootleq@gmail.com>
+License:    Public Domain
+Repository: https://github.com/bootleq/vim-tabline
+
+==============================================================================
+CONTENTS                                                    *tabline-contents*
+
+    Introduction  .......................... |tabline-introduction|
+    Usage  ................................. |tabline-usage|
+    Functions  ....................... ..... |tabline-functions|
+    Configuration  ......................... |tabline-configuration|
+      Options  ............................. |tabline-options|
+      Highlight groups  .................... |tabline-highlight-groups|
+
+==============================================================================
+INTRODUCTION                                            *tabline-introduction*
+
+Customize the content of tab pages line, by provide a function for 'tabline'
+option.
+
+==============================================================================
+USAGE                                                          *tabline-usage*
+
+If 'tabline' option is empty, this plugin will set 'tabline' automatically.
+
+You can also set 'tabline' manually: >
+  set tabline=%!tabline#build()
+<
+
+==============================================================================
+FUNCTIONS                                                  *tabline-functions*
+
+tabline#tabs()                                                *tabline#tabs()*
+
+  Return internal |List| variable which stores information of each tabs.
+
+  Note this is not a copied variable, change its value might cause unexpected
+  behavior. Use |deepcopy()| if you need to alter them.
+
+==============================================================================
+CONFIGURATION                                          *tabline-configuration*
+
+------------------------------------------------------------------------------
+Options                                                      *tabline-options*
+
+You can set below options in g: scope (|g:var|), otherwise their internal (s:)
+default values will be used.
+
+tab_min_width          (default: 0) ~
+
+  Minimal width of each tab.
+
+tab_max_width          (default: 40) ~
+
+  Max width of each tab.
+  If set to 0, max width goes unlimited.
+
+divide_equally         (default: 0) ~
+
+  When tabline is too long, try to set each tab in same width.
+  Set to 1 to enable this feature.
+
+tab_min_shrinked_width (default: 15) ~
+
+  When divide_equally is on, each divided tab must be wider than this value.
+
+scroll_off             (default: 5) ~
+
+  When tabline is too long, this defines the minimal number of tabs to keep
+  visible before/after current tab.
+
+ellipsis_text          (default: "…") ~
+
+  When tab label was truncated, display this string for clipped part.
+
+nofile_text            (default: "[Scratch]") ~
+
+  When |bufname()| (buffer name) is empty, and 'buftype' is "nofile", set tab
+  label to this string.
+
+new_file_text          (default: "[New]") ~
+
+  When buffer name is empty, and buffer type is other than "nofile", set tab
+  label to this string.
+
+modified_text          (default: "+") ~
+
+  When 'modified' is on, add this string to tab label.
+
+
+------------------------------------------------------------------------------
+Highlight Groups                                    *tabline-highlight-groups*
+
+This plugin takes below highlight groups for color customization:
+
+TabLine
+  None-active tab page label. |hi-Tabline|
+
+TabLineSel
+  Current active tab page label. |hi-TablineSel|
+
+TabLineFill
+  Exclude tab labels, the spare space of tabline. |hl-TabLineFill|
+
+TabLineNr                                                  *tabline-TabLineNr*
+  Tab number.
+
+TabLineNrSel                                            *tabline-TabLineNrSel*
+  Tab number, for current active tab.
+
+TabLineSplitNr                                        *tabline-TabLineSplitNr*
+  Number of splited windows.
+
+TabLineSplitNrSel                                  *tabline-TabLineSplitNrSel*
+  Number of splited windows, for current active tab.
+
+TabLineMore                                              *tabline-TabLineMore*
+  When tabline overflows (too many tabs), a ">" label will appear at the end
+  of current visible part.  Use this group to color the label.
+
+==============================================================================
+vim:tw=78:fo=tcroq2mM:et:sts=2:sw=2:ft=help:norl:

@@ -1,0 +1,17 @@
+#!/bin/sh
+tmux_not_exist=`tmux list-sessions 2>&1 | grep 'failed to connect to server' | wc -l`
+
+if [ $tmux_not_exist = "1" ]
+	then tmux -2
+else
+	sessions=`tmux list-sessions | wc -l`;
+	if [ $sessions -gt 1 ]
+		then 
+			if [ $# -gt 0 ]
+				then tmux -2 attach -t $1
+			else tmux list-sessions
+			fi
+	else
+		tmux -2 attach
+	fi
+fi
