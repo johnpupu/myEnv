@@ -212,3 +212,5 @@ let g:tabline_scroll_off=5
 let g:EasyClipAutoFormat=0
 let g:EasyClipDoSystemSync=0
 
+" pietty 右鍵貼上
+set mouse-=a
