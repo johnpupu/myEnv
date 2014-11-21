@@ -215,6 +215,9 @@ let g:EasyClipDoSystemSync=0
 " pietty 右鍵貼上
 set mouse-=a
 
+" no incsearch
+set nois
+
 " set undodir
 if exists("+undofile")
   " undofile - This allows you to use undos after exiting and restarting
