@@ -2,7 +2,9 @@ $this->_view_integrate = array(
 		'${1:master_model.detail_model}' => array(
 				'type' => '${2:has|many_many}',
 				${3:'foreign_key' => 'my_pk_in_other_model',}
+				${4:'order_by' => 'field ASC|DESC',}
+				${5:'action_view' => 'view_file',}
 		),
 );
 
-${4}
+${6}
