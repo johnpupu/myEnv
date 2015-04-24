@@ -1,10 +1,12 @@
 $this->_view_integrate = array(
-		'${1:master_model.detail_model}' => array(
+		'${1:master_model_join_key.detail_model_join_key}' => array(
 				'type' => '${2:has|many_many}',
-				${3:'foreign_key' => 'my_pk_in_other_model',}
+				${3:'foreign_key' => 'my_pk_in_other_model (required when type = has)',}
 				${4:'order_by' => 'field ASC|DESC',}
 				${5:'action_view' => 'view_file',}
+				${6:'master_model' => 'master_model_name (required when master_model_name != master_model_join_key)',}
+				${7:'detail_model' => 'detail_model_name (required when detail_model_name != detail_model_join_key)',}
 		),
 );
 
-${6}
+${8}
