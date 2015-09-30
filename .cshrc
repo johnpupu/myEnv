@@ -9,15 +9,17 @@ alias h		history 25
 alias j		jobs -l
 alias la	ls -a
 alias lf	ls -FA
-alias ll	ls -lAh
+alias ll	ls -lAhv
 alias tmux	tmux -2
 alias tmuxr	~/.tmuxr
 alias svndiff 'svn diff --diff-cmd ~/.svndiff_to_vimdiff'
+alias more less
+alias man 'man \!:1 | less'
 
 # A righteous umask
 umask 22
 
-set path = (/sbin /bin /usr/sbin /usr/bin /usr/games /usr/local/sbin /usr/local/bin $HOME/bin)
+set PATH = (/sbin /bin /usr/sbin /usr/bin /usr/games /usr/local/sbin /usr/local/bin $HOME/bin)
 
 setenv	EDITOR	vi
 setenv	PAGER	more
@@ -39,10 +41,10 @@ endif
 setenv LC_CTYPE en_US.ISO8859-1
 #setenv LC_ALL zh_TW.Big5
 #setenv LANG zh_TW.Big5
-#setenv LC_ALL en_US.UTF-8
-#setenv LANG en_US.UTF-8
-setenv LC_ALL zh_TW.UTF-8
-setenv LANG zh_TW.UTF-8
+setenv LC_ALL en_US.UTF-8
+setenv LANG en_US.UTF-8
+#setenv LC_ALL zh_TW.UTF-8
+#setenv LANG zh_TW.UTF-8
 
 set prompt = '[%B%n%{^[[1;32m%}@%M%b] %B%~%b%# '
 
@@ -67,3 +69,5 @@ bindkey "\e[3~" delete-char # Delete
 bindkey "\e[4~" end-of-line # End
 bindkey "^P" history-search-backward # CTRL + p = history-search-backward
 bindkey "^N" history-search-forward # CTRL + n = history-search-forward
+
+unlimit coredumpsize
