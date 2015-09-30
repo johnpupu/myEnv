@@ -65,9 +65,10 @@ set bs=2    " allow backspacing over everything in insert mode
 set ts=2
 set ff=unix
 set nobk
-"set fileencodings=utf-8,big5,gbk,sjis,euc-jp,euc-kr,utf-bom,iso8859-1
-"set encoding=utf-8
-"set termencoding=utf-8
+"set encoding=big5
+"set fileencoding=big5
+"set fileencodings=big5,utf-8,euc-jp,gbk,euc-kr,utf-bom,iso8859-1
+"set termencoding=big5
 set encoding=utf-8
 set fileencoding=utf-8
 set fileencodings=utf-8,big5,euc-jp,gbk,euc-kr,utf-bom,iso8859-1
