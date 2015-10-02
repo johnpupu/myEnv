@@ -187,3 +187,18 @@ snippet bvpva
 snippet bvpvma
 	<?bvp('viewMany-actions', array(${1:'actions' => array('update', 'delete')}${2: ,'extra_actions' => array()}))?>
 	${3}
+snippet bvpimf
+	<?bvp('indexMany-many_many_field', array(${1:'fields' => array('other_primary_key', 'other_identity', 'my_identity')}))?>
+	${2}
+snippet bvpimv
+	<?bvp('indexMany-many_many_value', array(${1:'fields' => array('other_primary_key', 'other_identity', 'my_identity')}))?>
+	${2}
+snippet bvpcmf
+	<?bvp('createMany-many_many_field', array(${1:'fields' => array('my_identity')}))?>
+	${2}
+snippet bvpumf
+	<?bvp('updateMany-many_many_field', array(${1:'fields' => array('my_identity')}))?>
+	${2}
+snippet bvpvmf
+	<?bvp('viewMany-many_many_field', array(${1:'fields' => array('other_primary_key', 'other_identity', 'my_identity')}))?>
+	${2}
