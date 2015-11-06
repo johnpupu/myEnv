@@ -2,10 +2,9 @@ $this->_relation_integrate = array(
 		'${1:master_model_join_key.detail_model_join_key}' => array(
 				'type' => '${2:has|many_many}',
 				${3:'order_by' => 'detail_model_field_name ASC|DESC',}
-				${4:'action_view' => 'top_action_view_name',}
 				${5:'master_model' => 'master_model_name (required when master_model_name != master_model_join_key)',}
 				${6:'detail_model' => 'detail_model_name (required when detail_model_name != detail_model_join_key)',}
-				${7:'integrate_action' => array( 'create', 'update', 'view' ),}
+				${7:'action' => array( 'create', 'update', 'view' ),}
 		),
 );
 
