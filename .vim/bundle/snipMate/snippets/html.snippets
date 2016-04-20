@@ -84,9 +84,9 @@ snippet uf
 	<div class="control-group">
 			<label class="control-label"><?=t('${1:field}')?></label>
 			<div class="controls">
-					<?php if(!empty($model->${2:$1}) || $update_integrate_render_child):?>
-					${3:<img src="<?=$model->$1?>" data-integrate-source="<?=$model_name?>[$1]" data-integrate-file='true'>}
-					${4:<a href="<?=$model->$1?>" data-integrate-source="<?=$model_name?>[$1]" data-integrate-file='true'><?=$model->$1?></a>}
+					<?php if(!empty($model->${2:$1})):?>
+					${3:<img src="<?=$model->$1?>">}
+					${4:<a href="<?=$model->$1?>"><?=$model->$1?></a>}
 					<br/>
 					<?if(!$upload_files_notnull['${5:$1}']):?>
 					<input type="checkbox" name="<?=$model_name?>_delete[${6:$1}]" value="1"> <?=t('delete')?>
@@ -152,6 +152,7 @@ snippet imths
 	${3}
 snippet imtd
 	<td><?=$model->${1:field}?></td>
+	${2}
 snippet imtde
 	<td><a class="editable" data-pk="<?=$model->{$many_many_parameter['other_join_key']}->{$many_many_parameter['other_primary_key']}?>" data-name="<?=$many_many_parameter['relation_model']?>[${2:$1}]"><?=$model->${1:field}?></a></td>
 	${3}
@@ -159,37 +160,37 @@ snippet bvp
 	<?bvp('${1:view_part}')?>
 	${2}
 snippet bvpirf
-	<?bvp('index-render_belongs_to_and_target_to_field', array('render_foreign_key' => '${1:render_foreign_key}'))?>
-	${2}
+	<?bvp('index-render_belongs_to_and_target_to_field', array('render_foreign_key' => '${1:render_foreign_key}'${2:, 'enable_sort' => true}))?>
+	${3}
 snippet bvpirv
-	<?bvp('index-render_belongs_to_and_target_to_value', array('render_foreign_key' => '${1:render_foreign_key}'))?>
-	${2}
+	<?bvp('index-render_belongs_to_and_target_to_value', array('render_foreign_key' => '${1:render_foreign_key}'${2:, 'enable_link' => true}))?>
+	${3}
 snippet bvpcr
-	<?bvp('create-render_belongs_to_and_target_to', array('render_foreign_key' => '${1:render_foreign_key}'${2: ,'extra_class' => 'double'}))?>
-	${3}
+	<?bvp('create-render_belongs_to_and_target_to', array('render_foreign_key' => '${1:render_foreign_key}'${2:, 'extra_class' => 'double'}${3:, 'attributes' => array()}))?>
+	${4}
 snippet bvpur
-	<?bvp('update-render_belongs_to_and_target_to', array('render_foreign_key' => '${1:render_foreign_key}'${2: ,'extra_class' => 'double'}))?>
-	${3}
+	<?bvp('update-render_belongs_to_and_target_to', array('render_foreign_key' => '${1:render_foreign_key}'${2:, 'extra_class' => 'double'}${3:, 'attributes' => array()}))?>
+	${4}
 snippet bvpvr
-	<?bvp('view-render_belongs_to_and_target_to', array('render_foreign_key' => '${1:render_foreign_key}'${2: ,'extra_class' => 'double'}))?>
-	${3}
+	<?bvp('view-render_belongs_to_and_target_to', array('render_foreign_key' => '${1:render_foreign_key}'${2:,'extra_class' => 'double'}${3:, 'enable_link' => true}))?>
+	${4}
 snippet bvpia
 	<?bvp('index-actions', array(${1:'actions' => array('create')}${2: ,'extra_actions' => array()}))?>
 	${3}
 snippet bvpiarv
-	<?bvp('index-actions_row_value', array(${1:'actions' => array('view', 'update', 'delete')}${2: ,'extra_actions' => array()}${3: ,'extra_relations' => array()}${4: ,'stand_out' = 'view'}))?>
+	<?bvp('index-actions_row_value', array(${1:'actions' => array('view', 'update', 'delete')}${2:, 'extra_actions' => array()}${3:, 'extra_relations' => array()}${4:, 'stand_out' = 'view'}))?>
 	${5}
 snippet bvpima
-	<?bvp('indexMany-actions', array(${1:'actions' => array('create')}${2: ,'extra_actions' => array()}))?>
+	<?bvp('indexMany-actions', array(${1:'actions' => array('create')}${2:, 'extra_actions' => array()}))?>
 	${3}
 snippet bvpimarv
-	<?bvp('index-actions_row_value', array(${1:'actions' => array('view', 'update', 'delete')}${2: ,'extra_actions' => array()}))?>
+	<?bvp('index-actions_row_value', array(${1:'actions' => array('view', 'update', 'delete')}${2:, 'extra_actions' => array()}))?>
 	${3}
 snippet bvpva
-	<?bvp('view-actions', array(${1:'actions' => array('update', 'delete')}${2: ,'extra_actions' => array()}${3: ,'extra_relations' => array()}))?>
+	<?bvp('view-actions', array(${1:'actions' => array('update', 'delete')}${2:, 'extra_actions' => array()}${3:, 'extra_relations' => array()}))?>
 	${4}
 snippet bvpvma
-	<?bvp('viewMany-actions', array(${1:'actions' => array('update', 'delete')}${2: ,'extra_actions' => array()}))?>
+	<?bvp('viewMany-actions', array(${1:'actions' => array('update', 'delete')}${2:, 'extra_actions' => array()}))?>
 	${3}
 snippet bvpimf
 	<?bvp('indexMany-many_many_field', array(${1:'fields' => array('other_primary_key', 'other_identity', 'my_identity')}))?>

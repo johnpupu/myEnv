@@ -1,10 +1,11 @@
 $this->_relation_integrate = array(
-		'${1:master_model_join_key.detail_model_join_key}' => array(
+		'${1:detail_model_join_key}' => array(
 				'type' => '${2:has|many_many}',
 				${3:'order_by' => 'detail_model_field_name ASC|DESC',}
-				${5:'master_model' => 'master_model_name (required when master_model_name != master_model_join_key)',}
-				${6:'detail_model' => 'detail_model_name (required when detail_model_name != detail_model_join_key)',}
-				${7:'action' => array( 'create', 'update', 'view' ),}
+				${4:'required' => TRUE|FALSE,}
+				${5:'detail_model' => 'detail_model_name (required when detail_model_name != detail_model_join_key)',}
+				${6:'detail_controller' => 'detail_controller_name (required when detail_controller_name != detail_model_join_key)',}
+				${7:'callback' => array( see ICHI doc for interface of callback ),}
 		),
 );
 
