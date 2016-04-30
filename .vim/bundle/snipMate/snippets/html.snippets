@@ -98,11 +98,8 @@ snippet uf
 	</div>
 	${9}
 snippet ith
-	<th><?=t('${1:field}')?></th>
+	<th data-sort-name="<?=$model_name?>.${2:$1}"><?=t('${1:field}')?></th>
 	${2}
-snippet iths
-	<th><a class="sort" data-name="<?=$model_name?>.${2:$1}"><?=t('${1:field}')?></a></th>
-	${3}
 snippet itd
 	<td><?=$model->${1:field}?></td>
 	${2}
@@ -145,11 +142,8 @@ snippet umt
 	</div>
 	${6}
 snippet imth
-	<th><?=t('${1:field}')?></th>
+	<th data-sort-name="<?=$many_many_parameter['relation_model']?>.${2:$1}"><?=t('${1:field}')?></th>
 	${2}
-snippet imths
-	<th><a class="sort" data-name="<?=$many_many_parameter['relation_model']?>.${2:$1}"><?=t('${1:field}')?></a></th>
-	${3}
 snippet imtd
 	<td><?=$model->${1:field}?></td>
 	${2}
@@ -160,7 +154,7 @@ snippet bvp
 	<?bvp('${1:view_part}')?>
 	${2}
 snippet bvpirf
-	<?bvp('index-render_belongs_to_and_target_to_field', array('render_foreign_key' => '${1:render_foreign_key}'${2:, 'enable_sort' => true}))?>
+	<?bvp('index-render_belongs_to_and_target_to_field', array('render_foreign_key' => '${1:render_foreign_key}'))?>
 	${3}
 snippet bvpirv
 	<?bvp('index-render_belongs_to_and_target_to_value', array('render_foreign_key' => '${1:render_foreign_key}'${2:, 'enable_link' => true}))?>
