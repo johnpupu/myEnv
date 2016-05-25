@@ -171,15 +171,21 @@ snippet bvpvr
 snippet bvpia
 	<?bvp('index-actions', array(${1:'actions' => array('create')}${2: ,'extra_actions' => array()}))?>
 	${3}
+snippet bvpiarf
+	<?bvp('index-actions_row_field', array(${1:'extra_class' => 'x1'})))?>
+	${2}
 snippet bvpiarv
-	<?bvp('index-actions_row_value', array(${1:'actions' => array('view', 'update', 'delete')}${2:, 'extra_actions' => array()}${3:, 'extra_relations' => array()}${4:, 'stand_out' = 'view'}))?>
-	${5}
+	<?bvp('index-actions_row_value', array(${1:'actions' => array('view', 'update', 'delete')}${2:, 'extra_actions' => array()}${3:, 'extra_relations' => array()}${4:, 'stand_out' = 'view'}${5:, 'extra_class' = 'x1'}))?>
+	${6}
 snippet bvpima
 	<?bvp('indexMany-actions', array(${1:'actions' => array('create')}${2:, 'extra_actions' => array()}))?>
 	${3}
+snippet bvpimarf
+	<?bvp('indexMany-actions_row_field', array(${1:'extra_class' => 'x1'})))?>
+	${2}
 snippet bvpimarv
-	<?bvp('index-actions_row_value', array(${1:'actions' => array('view', 'update', 'delete')}${2:, 'extra_actions' => array()}))?>
-	${3}
+	<?bvp('indexMany-actions_row_value', array(${1:'actions' => array('view', 'update', 'delete')}${2:, 'extra_actions' => array()}${3:, 'extra_class' = 'x1'}))?>
+	${4}
 snippet bvpva
 	<?bvp('view-actions', array(${1:'actions' => array('update', 'delete')}${2:, 'extra_actions' => array()}${3:, 'extra_relations' => array()}))?>
 	${4}
