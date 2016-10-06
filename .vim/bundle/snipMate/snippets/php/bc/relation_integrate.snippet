@@ -3,9 +3,10 @@ $this->_relation_integrate = array(
 				'type' => '${2:has|many_many}',
 				${3:'order_by' => 'detail_model_field_name ASC|DESC',}
 				${4:'required' => TRUE|FALSE,}
-				${5:'detail_model' => 'detail_model_name (required when detail_model_name != detail_model_join_key)',}
-				${6:'detail_controller' => 'detail_controller_name (required when detail_controller_name != detail_model_join_key)',}
-				${7:'callback' => array( see ICHI doc for interface of callback ),}
+				${5:'name' => 'display_name',}
+				${6:'detail_model' => 'detail_model_name (required when detail_model_name != detail_model_join_key)',}
+				${7:'detail_controller' => 'detail_controller_name (required when detail_controller_name != detail_model_join_key)',}
+				${8:'callback' => array( see ICHI doc for interface of callback ),}
 		),
 );
 
