@@ -6,8 +6,9 @@ $this->_relation_integrate = array(
 				${5:'name' => 'display_name',}
 				${6:'detail_model' => 'detail_model_name (required when detail_model_name != detail_model_join_key)',}
 				${7:'detail_controller' => 'detail_controller_name (required when detail_controller_name != detail_model_join_key)',}
-				${8:'callback' => array( see ICHI doc for interface of callback ),}
+				${8:'retrieve_callback' => false,}
+				${9:'callback' => array( see ICHI doc for interface of callback, it will overwrite retrieved callback ),}
 		),
 );
 
-${8}
+${10}

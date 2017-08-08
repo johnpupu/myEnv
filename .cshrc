@@ -15,6 +15,9 @@ alias tmuxr	~/.tmuxr
 alias svndiff 'svn diff --diff-cmd ~/.svndiff_to_vimdiff'
 alias more less
 alias man 'man \!:1 | less'
+alias pwgen	pwgen -sy
+alias memusage "ps aux | grep '\!:1' | awk '{ total += "\$"6; } END { print total/1024"'" MB"'" }'"
+alias cpuusage "ps aux | grep '\!:1' | awk '{ total += "\$"3; } END { print total"'" %"'" }'"
 
 # A righteous umask
 umask 22

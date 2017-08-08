@@ -1,5 +1,41 @@
 execute pathogen#infect()
 
+" ================================= Vundle =================================
+
+set nocompatible              " be iMproved, required
+filetype off                  " required
+
+" set the runtime path to include Vundle and initialize
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+" alternatively, pass a path where Vundle should install plugins
+"call vundle#begin('~/some/path/here')
+
+" let Vundle manage Vundle, required
+Plugin 'VundleVim/Vundle.vim'
+
+" install Vundle bundles
+if filereadable(expand("~/.vim/.vimrc.bundles"))
+  source ~/.vim/.vimrc.bundles
+endif
+
+" All of your Plugins must be added before the following line
+call vundle#end()            " required
+filetype plugin indent on    " required
+" To ignore plugin indent changes, instead use:
+"filetype plugin on
+"
+" Brief help
+" :PluginList       - lists configured plugins
+" :PluginInstall    - installs plugins; append `!` to update or just :PluginUpdate
+" :PluginSearch foo - searches for foo; append `!` to refresh local cache
+" :PluginClean      - confirms removal of unused plugins; append `!` to auto-approve removal
+"
+" see :h vundle for more details or wiki for FAQ
+" Put your non-Plugin stuff after this line
+
+" ================================= Vundle =================================
+
 "if &term =~ "xterm"
 "    if has ("terminfo")
 "        set t_Co=16
@@ -154,7 +190,7 @@ au BufNewFile,BufRead *.ini :set ft=php " all my .tpl files ARE html
 au BufNewFile,BufRead *.phtml :set ft=html " all my .tpl files ARE html
 au BufNewFile,BufRead *.php :set ft=php " all my .tpl files ARE html
 
-au FileType javascript so ~/.vim/indent/javascript.vim
+"au FileType javascript so ~/.vim/indent/javascript.vim
 
 "for textmate, plugin
 filetype on
@@ -164,7 +200,7 @@ filetype indent on
 nmap gf :tabedit <cfile><CR>
 
 "Folding
-set foldenable
+"set foldenable
 
 "Highlight SQL syntax in string
 let php_sql_query=1
@@ -189,9 +225,11 @@ highlight User6 ctermfg=white
 
 nmap <F1> :tabprev<CR>
 nmap <F2> :tabnext<CR>
-nmap <F3> :tabnew 
+"nmap <F3> :tabnew 
+nmap <F3> :CtrlP 
 nmap <F4> :tabclose<CR>
-nmap <F5> <Plug>HexManager
+"nmap <F5> <Plug>HexManager
+"nmap <F5> :CtrlP<CR>
 nmap <F6> :set ft=php<CR>
 nmap <F7> :set ft=javascript<CR>
 nmap <F8> :set ft=html<CR>
@@ -221,14 +259,6 @@ hi TabLineSel        cterm=bold      ctermfg=45
 hi TabLineFill       cterm=reverse
 hi TabLineMore       cterm=underline ctermfg=White ctermbg=236
 
-" tabline plugin
-let g:tabline_tab_max_width=0
-let g:tabline_scroll_off=5
-
-" EasyClip plugin
-let g:EasyClipAutoFormat=0
-let g:EasyClipDoSystemSync=0
-
 " pietty 右鍵貼上
 set mouse-=a
 
@@ -247,4 +277,19 @@ if exists("+undofile")
   set undodir=./.vim-undo//
   set undodir+=~/.vim/undo//
   set undofile
+endif
+
+" tabline plugin config
+if filereadable(expand("~/.vim/.vimrc.tabline"))
+  source ~/.vim/.vimrc.tabline
+endif
+
+" EasyClip plugin config
+if filereadable(expand("~/.vim/.vimrc.easyclip"))
+  source ~/.vim/.vimrc.easyclip
+endif
+
+" CtrlP plugin config
+if filereadable(expand("~/.vim/.vimrc.CtrlP"))
+  source ~/.vim/.vimrc.CtrlP
 endif
