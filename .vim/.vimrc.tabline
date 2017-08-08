@@ -1,0 +1,3 @@
+" tabline plugin
+let g:tabline_tab_max_width=0
+let g:tabline_scroll_off=5

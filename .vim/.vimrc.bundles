@@ -1,0 +1,45 @@
+" The following are examples of different formats supported.
+" Keep Plugin commands between vundle#begin/end.
+" plugin on GitHub repo
+"Plugin 'tpope/vim-fugitive'
+" plugin from http://vim-scripts.org/vim/scripts.html
+" Plugin 'L9'
+" Git plugin not hosted on GitHub
+"Plugin 'git://git.wincent.com/command-t.git'
+" git repos on your local machine (i.e. when working on your own plugin)
+"Plugin 'file:///home/gmarik/path/to/plugin'
+" The sparkup vim script is in a subdirectory of this repo called vim.
+" Pass the path to set the runtimepath properly.
+"Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
+" Install L9 and avoid a Naming conflict if you've already installed a
+" different version somewhere else.
+" Plugin 'ascenator/L9', {'name': 'newL9'}
+
+" Ctrlp
+Plugin 'https://github.com/ctrlpvim/ctrlp.vim.git'
+
+" Easyclip
+Plugin 'https://github.com/tpope/vim-repeat.git'
+Plugin 'https://github.com/svermeulen/vim-easyclip.git'
+
+" Tabline
+"Plugin 'https://github.com/mkitt/tabline.vim.git'
+
+" Snipmate 因為是要吃舊版的 ~~ 目前 vundle 沒辦法指定 revision or version 所以暫不使用 vundle
+"Plugin 'https://github.com/msanders/snipmate.vim.git'
+
+" Snipmate 新版 ~ 但是好像也沒支援
+"Plugin 'MarcWeber/vim-addon-mw-utils'
+"Plugin 'tomtom/tlib_vim'
+"Plugin 'garbas/vim-snipmate'
+" Optional:
+"Plugin 'honza/vim-snippets'
+
+" Tagbar
+Plugin 'https://github.com/majutsushi/tagbar.git'
+
+" Official PHP indentation plug-in for VIm
+Plugin 'https://github.com/2072/PHP-Indenting-for-VIm.git'
+
+" Vastly improved Javascript indentation and syntax support in Vim.
+Plugin 'https://github.com/pangloss/vim-javascript.git'

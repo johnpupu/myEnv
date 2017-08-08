@@ -1,0 +1,3 @@
+" EasyClip plugin
+let g:EasyClipAutoFormat=0
+let g:EasyClipDoSystemSync=0
