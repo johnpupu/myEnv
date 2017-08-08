@@ -189,3 +189,8 @@ endif
 if filereadable(expand("~/.vim/.vimrc.CtrlP"))
   source ~/.vim/.vimrc.CtrlP
 endif
+
+" vim-easy-align
+if filereadable(expand("~/.vim/.vimrc.vim-easy-align"))
+  source ~/.vim/.vimrc.vim-easy-align
+endif

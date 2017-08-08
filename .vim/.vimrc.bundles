@@ -28,3 +28,6 @@ Plug 'https://github.com/2072/PHP-Indenting-for-VIm.git'
 
 " Vastly improved Javascript indentation and syntax support in Vim.
 Plug 'https://github.com/pangloss/vim-javascript.git'
+
+" vim-easy-align
+Plug 'junegunn/vim-easy-align'
