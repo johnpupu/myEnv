@@ -1,3 +1,4 @@
 " EasyClip plugin
 let g:EasyClipAutoFormat=0
 let g:EasyClipDoSystemSync=0
+let g:EasyClipAlwaysMoveCursorToEndOfPaste=1
