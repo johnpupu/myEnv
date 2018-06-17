@@ -134,7 +134,7 @@ highlight User6 ctermfg=white
 
 nmap <F1> :tabprev<CR>
 nmap <F2> :tabnext<CR>
-nmap <F3> :CtrlP 
+nmap <F3> :tabnew 
 nmap <F4> :tabclose<CR>
 nmap <F6> :set ft=php<CR>
 nmap <F7> :set ft=javascript<CR>
@@ -183,11 +183,6 @@ endif
 " EasyClip plugin config
 if filereadable(expand("~/.vim/.vimrc.easyclip"))
   source ~/.vim/.vimrc.easyclip
-endif
-
-" CtrlP plugin config
-if filereadable(expand("~/.vim/.vimrc.CtrlP"))
-  source ~/.vim/.vimrc.CtrlP
 endif
 
 " vim-easy-align
