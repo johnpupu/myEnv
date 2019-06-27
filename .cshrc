@@ -18,6 +18,10 @@ alias man 'man \!:1 | less'
 alias pwgen	pwgen -sy
 alias memusage "ps aux | grep '\!:1' | awk '{ total += "\$"6; } END { print total/1024"'" MB"'" }'"
 alias cpuusage "ps aux | grep '\!:1' | awk '{ total += "\$"3; } END { print total"'" %"'" }'"
+alias git-spu 'git svn dcommit; git push'
+alias git-spl 'git svn rebase; git pull'
+alias git-log 'git log --oneline'
+alias precmd 'set msg = `history -h 1` ; logger -t $REMOTEHOST \[$USER@$HOSTNAME\] $PWD# "${msg}" >/dev/null'
 
 # A righteous umask
 umask 22
