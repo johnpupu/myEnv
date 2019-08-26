@@ -52,7 +52,7 @@ set hls
 "set tabstop=4 shiftwidth=4 softtabstop=4
 set tabstop=4 shiftwidth=4 softtabstop=0
 "set ignorecase
-"set expandtab
+set expandtab
 
 " TAB setting{
 "   set expandtab "replace <TAB> with spaces
