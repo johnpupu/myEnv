@@ -189,3 +189,6 @@ endif
 if filereadable(expand("~/.vim/.vimrc.vim-easy-align"))
   source ~/.vim/.vimrc.vim-easy-align
 endif
+
+" vim-polyglot
+let g:polyglot_disabled = ['php']
