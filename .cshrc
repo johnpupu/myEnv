@@ -53,11 +53,12 @@ setenv LANG en_US.UTF-8
 #setenv LC_ALL zh_TW.UTF-8
 #setenv LANG zh_TW.UTF-8
 
+setenv HOSTNAME `hostname -f`
 set prompt = '[%B%n%{^[[1;32m%}@%M%b] %B%~%b%# '
 
 # if user is root, make the username bold and red
 if (`whoami` == "root") then
- set prompt = '[%B%{^[[1;31m%}%n%{^[[1;32m%}@%M%b] %B%~%b%# '
+ set prompt = "[%B%{^[[1;31m%}%n%{^[[1;32m%}@$HOSTNAME%b] %B%~%b%# "
 endif
 
 # color
