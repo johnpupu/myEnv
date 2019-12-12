@@ -53,12 +53,12 @@ set hls
 set tabstop=4 shiftwidth=4 softtabstop=0
 "set ignorecase
 set expandtab
-
+" Shift TAB equals to TAB
+inoremap <S-Tab> <C-V><Tab>
 " TAB setting{
 "   set expandtab "replace <TAB> with spaces
 "   set softtabstop=4
 "   set shiftwidth=4
-
 "   au FileType Makefile set noexpandtab
 "} 
 set bs=2    " allow backspacing over everything in insert mode
@@ -192,3 +192,4 @@ endif
 
 " vim-polyglot
 let g:polyglot_disabled = ['php']
+
