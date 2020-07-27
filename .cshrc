@@ -21,7 +21,10 @@ alias cpuusage "ps aux | grep '\!:1' | awk '{ total += "\$"3; } END { print tota
 alias git-spu 'git svn dcommit; git push'
 alias git-spl 'git svn rebase; git pull'
 alias git-log 'git log --oneline'
-alias precmd 'set msg = `history -h 1` ; logger -t $REMOTEHOST \[$USER@$HOSTNAME\] $PWD# "${msg}" >/dev/null'
+alias vpnls ls /etc/ppp/peers/
+alias vpn sudo pppd call $1
+alias vpndis sudo kill `ps aux | egrep \[p\]ppd | awk '{print $2}'`
+#alias precmd 'set msg = `history -h 1` ; logger -t $REMOTEHOST \[$USER@$HOSTNAME\] $PWD# "${msg}" >/dev/null'
 
 # A righteous umask
 umask 22
