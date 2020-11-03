@@ -1,3 +1,7 @@
+" vim-polyglot
+set nocompatible
+let g:polyglot_disabled = ['sensible','php']
+
 execute pathogen#infect()
 
 " ================================= Vim-Plug =================================
@@ -189,7 +193,3 @@ endif
 if filereadable(expand("~/.vim/.vimrc.vim-easy-align"))
   source ~/.vim/.vimrc.vim-easy-align
 endif
-
-" vim-polyglot
-let g:polyglot_disabled = ['php']
-
