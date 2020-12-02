@@ -30,4 +30,4 @@ Plug 'https://github.com/pangloss/vim-javascript.git'
 Plug 'junegunn/vim-easy-align'
 
 " polyglot
-Plug 'sheerun/vim-polyglot'
+Plug 'sheerun/vim-polyglot', { 'tag': 'v4.16.0' }
