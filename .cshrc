@@ -73,6 +73,9 @@ set autoexpand
 set autocorrect
 set recexact
 
+# Bell
+set nobeep
+
 # bind keypad keys for console, vt100, vt102, xterm
 bindkey "\e[1~" beginning-of-line # Home
 bindkey "\e[2~" overwrite-mode # Ins
