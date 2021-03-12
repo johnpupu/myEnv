@@ -1,6 +1,6 @@
 " vim-polyglot
 set nocompatible
-let g:polyglot_disabled = ['sensible','php']
+let g:polyglot_disabled = ['sensible','php','graphql']
 
 execute pathogen#infect()
 
