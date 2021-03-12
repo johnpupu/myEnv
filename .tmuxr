@@ -1,5 +1,7 @@
 #!/bin/sh
-tmux_not_exist=`tmux list-sessions 2>&1 | grep 'failed to connect to server' | wc -l`
+tmux_not_exist=`tmux list-sessions 2>&1 | egrep -i '(failed to connect to server|no server running)' | wc -l`
+# tmux list-session 1.* 錯誤訊息為 failed to connect to server
+# tmux list-session 3.* 錯誤訊息為 failed to no server running....
 
 if [ $tmux_not_exist = "1" ]
 	then tmux -2
