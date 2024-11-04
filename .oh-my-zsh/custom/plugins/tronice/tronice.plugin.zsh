@@ -49,3 +49,12 @@ alias git-spu='git svn dcommit; git push'
 alias git-spl='git svn rebase; git pull'
 alias git-log='git log --graph --oneline --decorate'
 #alias precmd='set msg = `history -h 1` ; logger -t $REMOTEHOST \[$USER@$HOSTNAME\] $PWD# "${msg}" >/dev/null'
+
+# Fix jobs behavior. https://stackoverflow.com/questions/32614648/weird-jobs-behavior-within-zsh
+fg() {
+    if [[ $# -eq 1 && $1 = - ]]; then
+        builtin fg %-
+    else
+        builtin fg %"$@"
+    fi
+}
