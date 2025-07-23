@@ -13,9 +13,7 @@ ln -s myEnv/.vimrc
 ln -s myEnv/.vim
 ln -s myEnv/.tmux.conf
 ln -s myEnv/.tmuxr
+ln -s myEnv/.tmux
 ln -s myEnv/.cshrc
 ln -s myEnv/.svndiff_to_vimdiff
 ln -s myEnv/.cshrc .tcshrc
-# TPM
-mkdir -p ~/.tmux/plugins/
-git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
