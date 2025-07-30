@@ -17,6 +17,10 @@ ln -s /root/myEnv/.tmux
 ln -s /root/myEnv/.cshrc
 ln -s /root/myEnv/.svndiff_to_vimdiff
 ln -s /root/myEnv/.cshrc .tcshrc
-ln -s /root/myEnv/.zshrc
-ln -s /root/myEnv/.p10k.zsh
-ln -s /root/myEnv/.oh-my-zsh/custom/plugins/tronice .oh-my-zsh/custom/plugins
+# zsh
+git clone https://github.com/ohmyzsh/ohmyzsh.git ~/.oh-my-zsh
+git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ~/.oh-my-zsh/custom/themes/powerlevel10k
+ln -s /root/myEnv/.zshrc ~
+ln -s /root/myEnv/.p10k.zsh ~
+ln -s /root/myEnv/.oh-my-zsh/custom/plugins/tronice ~/.oh-my-zsh/custom/plugins
+chsh -s /bin/zsh
