@@ -9,11 +9,14 @@ mv .tmuxr .tmuxr.yours
 mv .cshrc .cshrc.yours
 mv .tcshrc .tcshrc.yours
 mv .svndiff_to_vimdiff .svndiff_to_vimdiff.yours
-ln -s myEnv/.vimrc
-ln -s myEnv/.vim
-ln -s myEnv/.tmux.conf
-ln -s myEnv/.tmuxr
-ln -s myEnv/.tmux
-ln -s myEnv/.cshrc
-ln -s myEnv/.svndiff_to_vimdiff
-ln -s myEnv/.cshrc .tcshrc
+ln -s /root/myEnv/.vimrc
+ln -s /root/myEnv/.vim
+ln -s /root/myEnv/.tmux.conf
+ln -s /root/myEnv/.tmuxr
+ln -s /root/myEnv/.tmux
+ln -s /root/myEnv/.cshrc
+ln -s /root/myEnv/.svndiff_to_vimdiff
+ln -s /root/myEnv/.cshrc .tcshrc
+ln -s /root/myEnv/.zshrc
+ln -s /root/myEnv/.p10k.zsh
+ln -s /root/myEnv/.oh-my-zsh/custom/plugins/tronice .oh-my-zsh/custom/plugins

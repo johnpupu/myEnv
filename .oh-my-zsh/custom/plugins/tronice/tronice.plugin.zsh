@@ -78,3 +78,6 @@ zstyle ':completion:*' group-name ''
 # Completers for my own scripts
 zstyle ':completion:*:*:sstrans*:*' file-patterns '*.(lst|clst)'
 zstyle ':completion:*:*:ssnorm*:*' file-patterns '*.tsv'
+
+# 增加 swaplist 指令
+alias swaplist="find /proc -maxdepth 2 -type f -name status -exec awk '/VmSwap:|Name:/ {printf \$2 \" \" \$3 \" \" \$4} END {print \"\"}' {} \; 2>/dev/null | awk '(\$2 ~ /^[0-9]+$/ && \$2 > 0) || (\$3 ~ /^[0-9]+$/ && \$3 > 0)' | sort -k2 -n -r"
